@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// get all users /api/posts
+// get all posts /api/posts
 router.get('/', (req, res) => {
     Post.findAll({
         attributes: [

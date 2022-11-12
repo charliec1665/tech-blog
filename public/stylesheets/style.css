@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+    --black: black;
+    --green: #ccffcc;
+    --d-green: #009973;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--green);
+    transition: color .1s;
+}
+
+.nav-link:hover {
+    color: var(--green);
+}
+
+/* a {
+    text-decoration: none;
+    color: var(--d-green);
+    font-weight: bold;
+    transition: color .1s;
+}
+
+a:hover {
+    color: var(--d-green);
+} */
+
+body {
+    background-color: var(--green);
+}
