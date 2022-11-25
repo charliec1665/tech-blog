@@ -12,29 +12,21 @@
     crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color: #e2fce2">
   <div class="wrapper">
     <header>
       <nav class="navbar bg-dark row">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item col">
-            <a class="nav-link" href="/" class="">Homepage</a>
-          </li>
-          <li class="nav-item col">
-            <a class="nav-link" href="/dashboard">Dashboard</a>
-          </li>
+        <ul class="nav m-4">
+            <a class="nav-link" style="color: #e2fce2" href="/">Homepage</a>
+            <a class="nav-link" style="color: #e2fce2" href="/dashboard">Dashboard</a>
           {{#if loggedIn}}
-          <li class="nav-item col">
-            <button id="logout" class="btn-no-style">Logout</button>
-          </li>
+            <button id="logout" style="color: #e2fce2" class="btn-no-style">Logout</button>
           {{else}}
-          <li class="nav-item col">
-            <a class="nav-link" href="/login">Login</a>
-          </li>
+            <a class="nav-link" style="color: #e2fce2" href="/login">Login</a>
           {{/if}}
         </ul>
         <h1>
-          <a class="nav-link" href="/">The Tech Blog</a>
+          <button class="nav-link mx-4 mb-4 p-1" style="background-color: #e2fce2; border-radius: 5px;" href="/">The Tech Blog</button>
         </h1>
       </nav>
     </header>
@@ -42,14 +34,18 @@
       {{{ body }}}
     </main>
     <footer>
-      Thanks for visiting!
+      <nav class="navbar fixed-bottom m-3 justify-content-center">
+        Thanks for visiting!
+      </nav>
     </footer>
   </div>
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
+  {{/if}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  {{/if}}
 </body>
 
 </html>
