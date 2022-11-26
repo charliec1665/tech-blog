@@ -1,8 +1,8 @@
-<ol class="post-list">
+<ul class="post-list mt-4" style="list-style: none;">
   {{#each posts as |post|}}
-  <li>
+  <li class="p-2">
     {{!-- to use a partial use > followed by the name of the partial file and the object passed to the partial --}}
     {{> post-info post }}
   </li>
   {{/each}}
-</ol>
+</ul>

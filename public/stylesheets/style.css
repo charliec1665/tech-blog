@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -16,7 +16,7 @@ a {
 
 .title {
     border-radius: 2px;
-}
+} */
 
 /* .nav-link {
     text-decoration: none;
