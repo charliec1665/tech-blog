@@ -1,32 +1,32 @@
-<section>
-  <h2>Create New Post</h2>
+<section class="border border-dark m-3">
+  <h3 class="p-2 bg-dark text-white-50">Create New Post</h3>
 
   <form class="new-post-form">
     <div>
-      <label for="post-title">Title</label>
+      <label for="post-title" class="p-2">Title:</label>
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-url">Link</label>
+      <label for="post-url" class="p-2">Link:</label>
       <input id="post-url" name="post-url" />
     </div>
-    <button type="submit" class="btn">Create</button>
+    <button type="submit" class="m-2 btn btn-dark" style="color: #e2fce2;">Create</button>
   </form>
 </section>
 
 {{!-- using this '#if' to only show this if the user has posts --}}
 {{#if posts.length}}
-<section>
-    <h2>Your Posts</h2>
-    <ol>
+<section class="col-sm-11 m-3">
+    <h3 class="p-2">Your Posts</h3>
+    <ul style="list-style: none;">
         {{#each posts as |post|}}
         <li>
             {{!-- using post-info partial --}}
             {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link btn btn-dark m-2" style="color: #e2fce2;">Edit</a>
         </li>
         {{/each}}
-    </ol>
+    </ul>
 </section>
 {{/if}}
 
